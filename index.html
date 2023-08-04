@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./input.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Raleway:ital,wght@0,100;0,400;0,600;0,900;1,200;1,400;1,500;1,900&family=Roboto:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ 
+</head>
+
+<body class="font-Roboto laptop:bg-DarkSlateGrey">
+
+  <div class=" formContainer laptop:rounded-[1.5rem] laptop:h-[33rem] laptop:w-[50rem] laptop:bg-white laptop:justify-center  laptop:my-[6rem] laptop:ml-[15rem]">
+
+    <div class="main-img w-[100%] object-cover h-[50%] laptop:flex ">
+
+      <div>
+        <img class="w-[100%] laptop:hidden" src="./assets/images/illustration-sign-up-mobile.svg" alt="letter image"
+        srcset="">
+      </div>
+
+      
+      
+      <div class="ml-[2rem] mr-[5rem] mt-[3rem] mb-[3rem] laptop:mb-[2rem] laptop:mr-[3rem] ">
+        <h1 class="text-5xl mb-[2rem] laptop:mb-[1rem] text-DarkSlateGrey font-bold">Stay updated!</h1>
+
+        <p class="text-[16px]  text-DarkSlateGrey font-semibold"> Join 60,000+ product managers receiving monthly
+          updates on:
+        </p>
+
+        <ul class="list mt-[1rem]  space-y-4 laptop:mt-[1.5rem] laptop:space-y-1 text-[18px] laptop:text-[16px]   font-medium text-DarkSlateGrey">
+          <li class="flex  space-x-3 ">
+            <img class="w-[20px] pb-6 laptop:pb-3" src="./assets/images/icon-success.svg" alt="" srcset="">
+            <p class="pl-[0.4rem] ">Product discovery and building what matters.</p>
+          </li>
+          <li class="flex space-x-3">
+            <img class="w-[20px] pb-6 laptop:pb-3" src="./assets/images/icon-success.svg" alt="">
+            <p class="pl-[0.4rem]">Measuring to ensure updates are a success.</p>
+          </li>
+          <li class="flex space-x-3">
+            <img class="w-[20px]" src="./assets/images/icon-success.svg" alt="" srcset="">
+            <p class="pl-[0.4rem]">And much more!</p>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="laptop:w-[50%] laptop:h-[35rem]  laptop:mx-[1rem]  laptop:my-[2rem] ">
+        <img class="hidden laptop:flex " src="./assets/images/illustration-sign-up-desktop.svg"
+        alt="" srcset="">
+      </div>
+
+    </div>
+
+    <!-- Sign-up form start -->
+
+
+    <div class="mx-[2rem] laptop:mt-[3rem] " onsubmit="return false">
+      <p class="mb-2 text-DarkSlateGrey text-[14px] ">Email address</p>
+      <p  id="emailError" class="error text-red-700 text-[10px] ml-[20rem]  "></p>
+      <input class="w-[25rem] h-[3rem] border    rounded-[0.5rem] p-6 hover:cursor-pointer"  type="email" name="email" 
+      id="email"
+        placeholder="email@company.com">
+
+      <!--  Button -->
+      <button type="submit" id="submit-Btn" class="text-white hover:bg-gradient-to-r from-Tomato to-orange-500 hover:cursor-pointer bg-DarkSlateGrey h-[3rem] w-[25rem] rounded-[0.5rem]
+    my-[1.5rem] p-2 text-[14px] "> Subscribe to monthly newsletter</button>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="infomodal laptop:w-[25rem] laptop:h-[25rem] laptop:mx-[25rem] laptop:my-[10rem] laptop:justify-center  mx-[2rem] overflow-y-hidden laptop:rounded-[1.5rem] h-auto max-h-[100%] my-[3rem] bg-white hidden" id="infoModal">
+    <div class="success-modal laptop:mx-[3rem] ">
+      <img class="laptop:w-[3rem] laptop:mt-[2rem]" src="./assets/images/icon-success.svg" alt="" srcset="">
+
+      <h1 class="text-5xl mt-[3rem] laptop:mt-[1rem] mb-[2rem] text-DarkSlateGrey
+     font-bold">Thanks for subscribing!</h1>
+
+      <p class="text-[16px] text-DarkSlateGrey mr-[8rem] laptop:mr-[0] ">
+        A confirmation email has been sent to <span class="paragraph-el font-bold "> </span>. 
+        Please open it and click the button inside to confirm your subscription.
+
+      </p>
+
+      <button class="dismissal text-white bg-DarkSlateGrey 
+       h-[3rem] w-[25rem] rounded-[0.5rem]
+       p-2 text-[14px] mt-[16rem] laptop:w-[19rem]
+        laptop:mt-[1rem] hover:bg-gradient-to-r from-Tomato to-orange-500 hover:cursor-pointer" id="close-el"> Dismiss message </button>
+    </div>
+  </div>
+  <!-- 
+  Email address
+  email@company.com
+
+  Subscribe to monthly newsletter -->
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <!-- Thanks for subscribing!
+
+  A confirmation email has been sent to ash@loremcompany.com. 
+  Please open it and click the button inside to confirm your subscription.
+
+  Dismiss message -->
+
+  <!-- Success message end -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
